@@ -1,2 +1,7 @@
-<h1>Items#show</h1>
-<p>Find me in app/views/items/show.html.erb</p>
+<h1>新規詳細ページ</h1>
+<%= attachment_image_tag @item.user, :profile_image, fallback: "no_image.jpg", class:"profile-img-circle", size: "100*100" %>
+<%= @item.user.name %>
+
+<div id="show_like_<%= @item.id %>">
+    <%= render 'likes/like', item: @item %>
+</div>
